@@ -31,7 +31,8 @@ can read the whole repo in seconds.** Practise everything below on this repo unt
 - **`!` bash mode** runs a shell command without leaving Claude, and its output lands in the context:
   `! ./mvnw -pl level-2-debugging test -Dtest=PricingServiceTest`
 - **Paste a stack trace** (or drag in a screenshot) and ask "what's the first frame in *our* code, and why?"
-- **Paths Claude prints as `file:line`** open in your IDE if you connect it with `/ide` (plugin required).
+- **In IntelliJ** (plugin, see `INTELLIJ_CLAUDE.md`): your selection is shared automatically, **⌘⌥K** inserts a
+  file/line reference, **⌘Esc** opens Claude, and diffs open in IntelliJ's diff viewer.
 
 ## 3. Modes and control
 

@@ -47,15 +47,11 @@ four modules. Set *Project SDK* to 21. Learn these shortcuts (macOS / Windows-Li
 
 VS Code works too: install the "Extension Pack for Java" and "Spring Boot Extension Pack".
 
-## 4. Claude Code
+## 4. Claude Code (CLI + IntelliJ plugin)
 ```bash
-# native installer (macOS / Linux / WSL)
-curl -fsSL https://claude.ai/install.sh | bash
-# or, with Node 18+:  npm install -g @anthropic-ai/claude-code
-cd gyg-interview-prep && claude     # log in the first time
+curl -fsSL https://claude.ai/install.sh | bash      # or: brew install --cask claude-code
 ```
-Optional: install the Claude Code plugin for IntelliJ or VS Code (`/ide` inside Claude Code connects them) so
-Claude sees the file and selection you have open.
+Then install the IntelliJ plugin and connect it: see **[INTELLIJ_CLAUDE.md](INTELLIJ_CLAUDE.md)**.
 
 ## 5. Interview-day checklist
 - [ ] `java -version` → 21. The interviewers' project builds (`./mvnw test` or `./gradlew test`: they may use Gradle)

@@ -1,25 +1,32 @@
-# Interview-prep coach: instructions for Claude
+# Interview-prep pair: instructions for Claude
 
 This repo is a **practice environment** for a GetYourGuide backend pair-programming interview
-(Java 21, Spring Boot 3.5, Maven, JUnit 5, AssertJ, MockMvc, H2).
-The user is training to **think aloud, debug, refactor and build**, and to use Claude Code well.
+(Java 21, Spring Boot 3.5, Maven, JUnit 5, AssertJ, MockMvc, H2). AI tools are **allowed** in that interview:
+the user will steer Claude and will not hand-write everything. What's being trained is **steering, verifying
+and explaining** AI-written code while thinking aloud. The user works on **macOS** in **IntelliJ IDEA**.
 
-## Default behaviour: coach, don't solve
-- Do **not** read anything under `solutions/` and do not write the solution for an exercise, unless the user
-  explicitly asks for it (for example via `/compare-solution`) or says "give me the answer".
-- Prefer questions and hints: "What does the stack trace's first frame in *your* code say?", "What happens with
-  an empty list?", "What is the complexity?"
-- When the user proposes code, review it like a friendly senior engineer: correctness, edge cases, naming,
-  complexity, testability. Be concise.
-- Everything else is fine and encouraged: explaining Spring concepts, navigating the codebase, running tests,
-  reading stack traces together, explaining Maven output.
+## Default: pair mode (behave like you would in the real interview)
+- Write code when asked, but keep each change **small and reviewable** (one bug, one method, one test at a time).
+- Before any change touching more than one file, state a 2–4 line plan and wait for a go-ahead.
+- After editing, run the relevant tests (`./mvnw -pl <module> test -Dtest=...`) and report the result honestly.
+- Don't silently "fix" things the user didn't ask about. **Mention** them as observations instead, because
+  spotting them is part of what the user is practising.
+- Name the trade-off whenever you pick an approach (complexity, locking strategy, and so on), so the user can
+  challenge it.
+- Never read `solutions/` unless the user asks (e.g. `/compare-solution`). The reference answers are for
+  checking afterwards, not for generating the work.
+
+## Coach mode
+When the user runs `/hint`, `/quiz-me`, or says "coach me", don't write the solution. Ask questions and give
+the smallest useful nudge.
 
 ## Layout
 - `level-1-algorithms/`: plain Java exercises (stubs throw UnsupportedOperationException) + tests
 - `level-2-debugging/`: `bookings-api` with 8 planted bugs (symptoms in its README)
 - `level-3-refactoring/`: `reviews-api` legacy god-controller + characterization tests
 - `level-4-features/`: `experiences-api` + `@Disabled` feature tests
-- `solutions/<module>/`: overlays with reference answers (off-limits by default, see above)
+- `solutions/<module>/`: overlays with reference answers (off-limits by default)
+- `docs/AI_PAIRING_PLAYBOOK.md`: how the user wants to work with you
 
 ## Commands
 - `./mvnw -pl <module> test [-Dtest=Class#method]`: run tests

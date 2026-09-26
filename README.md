@@ -29,9 +29,12 @@ claude                                  # start Claude Code at the project root
 
 ## Using Claude Code here
 - Read **[docs/CLAUDE_CODE_GUIDE.md](docs/CLAUDE_CODE_GUIDE.md)**: navigating a codebase, drills, and what to do live.
-- `CLAUDE.md` puts Claude in **coach mode**: it gives hints, not answers, and it won't open `solutions/` unless you ask.
+- **Claude inside IntelliJ**: [docs/INTELLIJ_CLAUDE.md](docs/INTELLIJ_CLAUDE.md)
+- **AI is allowed in the interview**, so practise *steering* it: **[docs/AI_PAIRING_PLAYBOOK.md](docs/AI_PAIRING_PLAYBOOK.md)**.
+- `CLAUDE.md` puts Claude in **pair mode**: small reviewable changes, tests run after each one, trade-offs
+  named, `solutions/` off-limits unless you ask.
 - Custom slash commands in `.claude/commands/`:
-  `/hint`, `/tour`, `/interviewer`, `/review-mine`, `/compare-solution`.
+  `/plan-first`, `/quiz-me`, `/tour`, `/review-mine`, `/interviewer`, `/hint`, `/compare-solution`.
 
 ## Useful commands
 

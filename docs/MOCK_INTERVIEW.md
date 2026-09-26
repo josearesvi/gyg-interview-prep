@@ -1,6 +1,7 @@
 # Mock interview: 60 minutes, with the real format
 
 Do this at least twice: once with a friend or with `/interviewer mock`, and once recording yourself.
+**Use Claude Code throughout, the way you will on the day** (see `docs/AI_PAIRING_PLAYBOOK.md`), and narrate every prompt.
 Reset first: `git stash -u` (or a fresh clone).
 
 | Time | Phase | What you do |
