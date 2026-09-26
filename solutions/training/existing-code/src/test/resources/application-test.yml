@@ -1,0 +1,3 @@
+# SETUP SNAG FIX: tests need a supplier key. It is a test-only value, never a real secret.
+inventory:
+  supplier-api-key: test-supplier-key

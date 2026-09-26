@@ -31,7 +31,7 @@ can read the whole repo in seconds.** Practise everything below on this repo unt
 - **`!` bash mode** runs a shell command without leaving Claude, and its output lands in the context:
   `! ./mvnw -pl level-2-debugging test -Dtest=PricingServiceTest`
 - **Paste a stack trace** (or drag in a screenshot) and ask "what's the first frame in *our* code, and why?"
-- **In IntelliJ** (plugin, see `INTELLIJ_CLAUDE.md`): your selection is shared automatically, **⌘⌥K** inserts a
+- **In IntelliJ** (plugin, see `INTELLIJ_COCKPIT.md`): your selection is shared automatically, **⌘⌥K** inserts a
   file/line reference, **⌘Esc** opens Claude, and diffs open in IntelliJ's diff viewer.
 
 ## 3. Modes and control
@@ -43,18 +43,29 @@ can read the whole repo in seconds.** Practise everything below on this repo unt
   (`.claude/settings.json`).
 - `/model` switches model. `/memory` edits `CLAUDE.md` memory. `/init` generates a `CLAUDE.md` for a new repo.
 
-## 4. Project memory and custom commands (already set up here)
+## 4. Memory and custom commands
 
 - `CLAUDE.md` (repo root) is read at the start of every session. Here it puts Claude in **coach mode**.
   Open it to see how it's written, then run `/init` on the interviewers' project to generate one there.
-- `.claude/commands/*.md` are **your own slash commands**, and `$ARGUMENTS` is what you type after the name:
+- `.claude/commands/*.md` (per project) and `~/.claude/commands/*.md` (**yours, in every project**) are custom
+  slash commands. `$ARGUMENTS` is what you type after the name. The interview kit (`claude-kit/`, installed by
+  `scripts/install-claude-kit.sh`) goes into `~/.claude/commands`, so it works in the interviewers' repo too:
+
+| Kit command | Use it for |
+|---------|-----------|
+| `/interview-mode` | First thing in any interview session |
+| `/requirements <paste>` | Every time the interviewer gives you requirements: questions to ask, criteria, `TASKS.md` |
+| `/onboard` | The first 5 minutes in a handed-over codebase |
+| `/scaffold <name>` | Starting from scratch with Spring Initializr |
+| `/plan-first`, `/quiz-me`, `/review-mine` | Plan before coding, defend the code, review the diff |
+
+Practice-only commands in this repo:
 
 | Command | Use it for |
 |---------|-----------|
 | `/tour level-2-debugging` | 5-minute onboarding to a module (layout + one request traced end-to-end) |
 | `/hint E3` | One progressive hint, never the answer |
-| `/review-mine` | Senior-style review of your `git diff`, then runs the tests |
-| `/interviewer level-2` | Timed role-play with feedback at the end |
+| `/interviewer level-2` | Timed role-play with feedback at the end (also: `/interviewer mock`) |
 | `/compare-solution E4` | Only after you've finished: compares yours with `solutions/` |
 
 ## 5. Navigation drills (do each one in < 3 minutes)

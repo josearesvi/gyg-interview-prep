@@ -14,7 +14,8 @@ the right scenario."* With AI in the loop, **typing speed stops being the signal
 ## The loop (use it for every task)
 
 1. **Understand** (you, 1–3 min): read the ticket and the test, restate them out loud, list the edge cases.
-   Ask the interviewer clarifying questions. *Don't prompt yet.*
+   Ask the interviewer clarifying questions. When requirements are handed to you, `/requirements <paste>` drafts the
+   questions and a `TASKS.md` checklist, but *you* ask the questions.
 2. **Plan** (you + AI): `/plan-first <task>` or Shift+Tab plan mode. Choose the approach **yourself** and say why.
 3. **Delegate small** (AI): one step at a time, with constraints in the prompt (see templates).
 4. **Verify** (you): read the diff in IntelliJ's diff viewer and run the tests. Say "this looks right because…"

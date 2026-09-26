@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tour-inventory
+  datasource:
+    url: jdbc:h2:mem:inventory;DB_CLOSE_DELAY=-1
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+server:
+  port: 8085
+
+inventory:
+  # Suppliers call the capacity endpoint with this key in the X-Api-Key header.
+  supplier-api-key: ${SUPPLIER_API_KEY}
+  max-seats-per-reservation: 10

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Aggregator so IntelliJ imports everything as one project when you open this folder.
+  wishlist-api/ is included automatically as soon as it exists (after /scaffold): press ⌘⇧I (Sync Maven) in IntelliJ.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>training</groupId>
+    <artifactId>from-scratch</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>acceptance</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>with-app</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/wishlist-api/pom.xml</exists>
+                </file>
+            </activation>
+            <modules>
+                <module>wishlist-api</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>

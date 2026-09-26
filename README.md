@@ -4,7 +4,9 @@ A practice environment that mirrors the **60-minute live pair-programming interv
 wasn't made with best practices in mind"*, where you **solve**, **debug**, **refactor** and **build**, in
 **Java + Spring Boot**, with AI tools allowed.
 
-## Levels
+## Two kinds of practice
+
+**Levels** build skills, one at a time:
 
 | Level | Folder | You practise | Starts as |
 |-------|--------|-------------|-----------|
@@ -12,29 +14,40 @@ wasn't made with best practices in mind"*, where you **solve**, **debug**, **ref
 | 2 | [`level-2-debugging`](level-2-debugging/README.md) | Finding 8 planted bugs from symptom-only tickets | 13 of 18 red |
 | 3 | [`level-3-refactoring`](level-3-refactoring/README.md) | Safely refactoring a legacy god-controller (SQL injection, stale cache, …) | 9 green + 3 disabled |
 | 4 | [`level-4-features`](level-4-features/README.md) | Pagination, idempotency, concurrency-safe booking, cancellation policy | 4 green + 11 disabled |
-| - | [`docs/MOCK_INTERVIEW.md`](docs/MOCK_INTERVIEW.md) | A timed 60-minute dress rehearsal | |
 
-`solutions/` holds a verified reference answer for every level. `./scripts/check-solutions.sh` applies them to a
-temp copy and runs every test, so your working tree is never touched.
+**Training projects** simulate interview day, with requirements handed to you in parts:
+
+| Training | You get | Build | Checked by | Guide |
+|----------|---------|-------|------------|-------|
+| A: from scratch | Requirements (3 parts) → build a "wishlist" API with `/scaffold` | Maven | 17 black-box HTTP acceptance tests | [WALKTHROUGH_1](docs/WALKTHROUGH_1.md) |
+| B: handed-over code | A "tour-inventory" service with a setup snag, then 3 requests (bug, feature, under-load) | **Gradle** | its own tests + the ones you add | [WALKTHROUGH_2](docs/WALKTHROUGH_2.md) |
+
+Start with [WALKTHROUGH_0](docs/WALKTHROUGH_0.md): the loop and the IntelliJ hotkeys, on Exercise 1.
+
+`solutions/` has a verified reference answer for everything. `./scripts/check-solutions.sh` and
+`./scripts/check-training.sh` prove them in temp copies, so your working tree is never touched.
 
 ## Quick start
 
 ```bash
 # prerequisites: Java 21 and git (see docs/SETUP.md). Maven is NOT needed: ./mvnw downloads it.
-git clone <this repo> && cd gyg-interview-prep
+# IntelliJ: File > New > Project from Version Control > git@github.com:josearesvi/gyg-interview-prep.git
 ./mvnw -q test-compile                  # first run downloads dependencies (~1-2 min)
 ./mvnw -pl level-1-algorithms test      # expect red: now go and make it green
-claude                                  # start Claude Code at the project root
+./scripts/install-claude-kit.sh         # once: the portable Claude commands
+# ⌘Esc in IntelliJ starts Claude Code at the project root
 ```
 
 ## Using Claude Code here
 - Read **[docs/CLAUDE_CODE_GUIDE.md](docs/CLAUDE_CODE_GUIDE.md)**: navigating a codebase, drills, and what to do live.
-- **Claude inside IntelliJ**: [docs/INTELLIJ_CLAUDE.md](docs/INTELLIJ_CLAUDE.md)
+- **IntelliJ as the cockpit** (Claude plugin, layout, ★ hotkeys): [docs/INTELLIJ_COCKPIT.md](docs/INTELLIJ_COCKPIT.md)
+- **Install the portable kit once**: `./scripts/install-claude-kit.sh`. It puts `/interview-mode`, `/requirements`,
+  `/onboard`, `/scaffold`, `/plan-first`, `/quiz-me` and `/review-mine` in `~/.claude`, so they also work in the
+  interviewers' project.
 - **AI is allowed in the interview**, so practise *steering* it: **[docs/AI_PAIRING_PLAYBOOK.md](docs/AI_PAIRING_PLAYBOOK.md)**.
 - `CLAUDE.md` puts Claude in **pair mode**: small reviewable changes, tests run after each one, trade-offs
   named, `solutions/` off-limits unless you ask.
-- Custom slash commands in `.claude/commands/`:
-  `/plan-first`, `/quiz-me`, `/tour`, `/review-mine`, `/interviewer`, `/hint`, `/compare-solution`.
+- Practice-only commands in `.claude/commands/`: `/tour`, `/hint`, `/interviewer`, `/compare-solution`.
 
 ## Useful commands
 

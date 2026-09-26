@@ -51,7 +51,7 @@ VS Code works too: install the "Extension Pack for Java" and "Spring Boot Extens
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash      # or: brew install --cask claude-code
 ```
-Then install the IntelliJ plugin and connect it: see **[INTELLIJ_CLAUDE.md](INTELLIJ_CLAUDE.md)**.
+Then install the IntelliJ plugin and connect it: see **[INTELLIJ_COCKPIT.md](INTELLIJ_COCKPIT.md)**.
 
 ## 5. Interview-day checklist
 - [ ] `java -version` → 21. The interviewers' project builds (`./mvnw test` or `./gradlew test`: they may use Gradle)
