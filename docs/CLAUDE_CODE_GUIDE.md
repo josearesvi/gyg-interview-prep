@@ -56,7 +56,10 @@ can read the whole repo in seconds.** Practise everything below on this repo unt
 |---------|-----------|
 | `/pair-mode` | First thing in any pairing session: the working agreement |
 | `/requirements <paste>` | Every time you get requirements: clarifying questions, criteria, `TASKS.md` |
-| `/onboard` | The first 5 minutes in a handed-over codebase |
+| `/describe-repo` | What a repo does: purpose, entry points, outputs, storage, business flows and rules |
+| `/onboard` | Does it build and run: tests, endpoints, setup snags |
+| `/best-practices-review [path] [quick\|full]` | A read-only audit: HTTP contract, errors, retries, events, coupling, logging, persistence, coverage |
+| `/investigate <symptom>` | A bug report → ranked hypotheses with where and how to confirm → a fix plan with a non-functional checklist |
 | `/scaffold <name>` | Starting from scratch with Spring Initializr |
 | `/plan-first`, `/review-mine`, `/explain-back` | Plan before coding, review the diff, check you can explain it |
 | `/wrap-up` | End of session: what changed, trade-offs, what's verified, what's next |

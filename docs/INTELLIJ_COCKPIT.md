@@ -15,7 +15,7 @@ Do this setup once (≈ 15 min). Verified against the Claude Code JetBrains docs
    side-by-side diff, where you accept or reject them.
 6. **Screen-share readability**: ⌘, → *Editor → Font* → size 15–16. *Tools → Terminal* → same font size.
    To zoom on the fly: ⌘⇧A → "Increase Font Size in All Editors".
-7. **Toolkit**: in the prep repo's terminal, `./scripts/install-claude-kit.sh` (`/pair-mode`, `/requirements`, `/onboard`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`, as skills in every project).
+7. **Toolkit**: in the prep repo's terminal, `./scripts/install-claude-kit.sh` (`/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`, as skills in every project).
    Restart Claude Code afterwards.
 
 ## 2. Hotkeys (default macOS keymap)

@@ -16,4 +16,6 @@ I'm new to this codebase. Help me get oriented fast, **without changing any code
    tests), as observations only.
 7. **Open questions**: 3 questions worth asking the people who own this code.
 
-Keep it scannable, under about 40 lines. If there's no CLAUDE.md, mention that `/init` can create one later.
+Keep it scannable, under about 40 lines. For the business-level "what and why" (flows, rules, outputs, storage),
+point to `/describe-repo`; for a full quality audit, point to `/best-practices-review`. If there's no CLAUDE.md,
+mention that `/init` can create one later.

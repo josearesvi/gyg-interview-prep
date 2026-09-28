@@ -31,15 +31,17 @@ use it. Say something like:
 
 > "I use Claude Code with a small set of skills I keep for pair programming. `/pair-mode` sets the working
 > agreement: small diffs, a plan before multi-file changes, tests after every edit, and it flags issues instead of
-> silently fixing them. I also have `/requirements` to turn a spec into acceptance criteria, `/onboard` for an
-> unfamiliar codebase, and `/review-mine` / `/wrap-up` at the end. I'll drive; it types. Stop me any time."
+> silently fixing them. For a codebase I don't know I use `/describe-repo`, `/onboard` and `/best-practices-review`.
+> For a bug I use `/investigate`, which gives hypotheses and how to confirm each one before any fix, and for new work
+> I use `/requirements`. I finish with `/review-mine` and `/wrap-up`. I'll drive; it types. Stop me any time."
 
 Then type `/pair-mode`. The skills never mention interviews, so what appears on screen is just your workflow.
 
 | Moment | Skill |
 |---|---|
 | Start | `/pair-mode` |
-| Handed a codebase | `/onboard` |
+| Handed a codebase | `/describe-repo` → `/onboard` → `/best-practices-review quick` |
+| Something is broken (bug report, failing behaviour) | `/investigate <symptom>` |
 | Given requirements (and follow-ups) | `/requirements <paste>` |
 | Starting from nothing | `/scaffold <name>` |
 | Before each non-trivial change | `/plan-first <task>` |

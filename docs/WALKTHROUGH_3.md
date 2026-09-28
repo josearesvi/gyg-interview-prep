@@ -5,19 +5,20 @@ interview repo (see `docs/RESEARCH_2026.md`). Do it once with me, then again alo
 
 ## T−24h: you "received the link" (≈ 45 min, the evening before)
 1. Prep repo terminal: `./scripts/start-training.sh gyg-replica`, then *File → Open…* the printed folder → Trust.
-2. Follow `training/gyg-replica/sealed/REQUEST-0.md`. Run it, `curl` every endpoint, `/pair-mode` + `/onboard`,
-   and write your **smell list by layer**. **Fix nothing.**
+2. Follow `training/gyg-replica/sealed/REQUEST-0.md`. Run it, `curl` every endpoint, then `/pair-mode` →
+   `/describe-repo` → `/onboard` → `/best-practices-review full`. Turn that into **your own smell list by layer**,
+   ranked. **Fix nothing.**
 
 ## T0: the interview (set a 60-minute timer)
 | Time | What | How |
 |---|---|---|
 | 0–5 | Intro | Your 1-minute background. They "share" the project, which you already have open. |
 | 5–8 | Orient them | Walk them through *your* smell list in 2 minutes. "I noticed… I'd prioritise… Where would you like to start?" |
-| 8–20 | **REQUEST-1** | Reproduce with `curl localhost:8080/activities/58820`, then read the log (⌘⇧F "Exception" in the Run window). Hypothesis → fix. Then *copy `sealed-tests/…/Request1Test.java` into `src/test/java/com/getourguide/interview/interviewer/`* and run it with ⌃⇧R. |
-| 20–32 | **REQUEST-2** | Notice the NPE **masks** the empty-result bug. Filter in SQL, case-insensitive, escaped. Run `Request2Test`. |
-| 32–44 | **REQUEST-3** | JPQL `GROUP BY` + a constructor expression into a record in `dto/`. Say the field-order trap out loud. Run `Request3Test`. |
-| 44–52 | **REQUEST-4** | Count the queries first (`spring.jpa.show-sql=true` or `Request4Test`), then `LEFT JOIN FETCH`, `readOnly`. Discuss pagination and indexes. |
-| 52–55 | **REQUEST-5** | Name the weaknesses of the test suite; write or show one `@WebMvcTest`. |
+| 8–20 | **REQUEST-1** | `/investigate` + paste the ticket. Reproduce with `curl localhost:8080/activities/58820`, then read the log (⌘⇧F "Exception" in the Run window). Hypothesis → fix. Then *copy `sealed-tests/…/Request1Test.java` into `src/test/java/com/getourguide/interview/interviewer/`* and run it with ⌃⇧R. |
+| 20–32 | **REQUEST-2** | `/investigate`. Notice the NPE **masks** the empty-result bug. Filter in SQL, case-insensitive, escaped. Run `Request2Test`. |
+| 32–44 | **REQUEST-3** | `/requirements` (it's new behaviour), then JPQL `GROUP BY` + a constructor expression into a record in `dto/`. Say the field-order trap out loud. Run `Request3Test`. |
+| 44–52 | **REQUEST-4** | `/investigate "slow at 10M rows"`. Count the queries first (`spring.jpa.show-sql=true` or `Request4Test`), then `LEFT JOIN FETCH`, `readOnly`. Discuss pagination and indexes. |
+| 52–55 | **REQUEST-5** | `/best-practices-review src/test quick`, then name the weaknesses of the test suite; write or show one `@WebMvcTest`. |
 | 55–60 | **REQUEST-6** + your questions | `/wrap-up` gives you the "what I'd do next" answer. The AI questions: frameworks in `docs/MOCK_INTERVIEW.md`. |
 
 Rules while you work: `/requirements` for each request, `/plan-first` before anything touching 2+ files, and small

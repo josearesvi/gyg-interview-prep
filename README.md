@@ -23,7 +23,8 @@ wasn't made with best practices in mind"*, where you **solve**, **debug**, **ref
 | B: handed-over code | A "tour-inventory" service with a setup snag, then 3 requests (bug, feature, under-load) | **Gradle** | its own tests + the ones you add | [WALKTHROUGH_2](docs/WALKTHROUGH_2.md) |
 | **C: GetYourGuide replica** | A clean-room copy of **GetYourGuide's real interview repo** (activities & suppliers, Boot 4, ~20 planted issues) + the 24h-before prep | Maven | 12 sealed "interviewer" tests | [WALKTHROUGH_3](docs/WALKTHROUGH_3.md) |
 
-Start with [WALKTHROUGH_0](docs/WALKTHROUGH_0.md): the loop and the IntelliJ hotkeys, on Exercise 1.
+**Start here: [PASS_1](docs/PASS_1.md)**, the guided pass through every exercise using the pairing toolkit.
+[WALKTHROUGH_0](docs/WALKTHROUGH_0.md) teaches the loop and the IntelliJ hotkeys on Exercise 1.
 What we know about the real interview, with sources: [RESEARCH_2026](docs/RESEARCH_2026.md).
 The technical depth the newer exercises expect (REST contracts, Spring, JPA, concurrency): [TECH_FUNDAMENTALS](docs/TECH_FUNDAMENTALS.md).
 
@@ -44,7 +45,7 @@ The technical depth the newer exercises expect (REST contracts, Spring, JPA, con
 ## Using Claude Code here
 - Read **[docs/CLAUDE_CODE_GUIDE.md](docs/CLAUDE_CODE_GUIDE.md)**: navigating a codebase, drills, and what to do live.
 - **IntelliJ as the cockpit** (Claude plugin, layout, ★ hotkeys): [docs/INTELLIJ_COCKPIT.md](docs/INTELLIJ_COCKPIT.md)
-- **Install your pairing toolkit once**: `./scripts/install-claude-kit.sh`. It installs `/pair-mode`, `/requirements`, `/onboard`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up` as
+- **Install your pairing toolkit once**: `./scripts/install-claude-kit.sh`. It installs `/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up` as
   user-level skills in `~/.claude/skills`, so they work in any project, including the one you're handed. They're
   worded as a professional pairing workflow you can openly switch on (see "Presenting your toolkit" in
   `docs/AI_PAIRING_PLAYBOOK.md`).
