@@ -47,17 +47,19 @@ can read the whole repo in seconds.** Practise everything below on this repo unt
 
 - `CLAUDE.md` (repo root) is read at the start of every session. Here it puts Claude in **coach mode**.
   Open it to see how it's written, then run `/init` on the interviewers' project to generate one there.
-- `.claude/commands/*.md` (per project) and `~/.claude/commands/*.md` (**yours, in every project**) are custom
-  slash commands. `$ARGUMENTS` is what you type after the name. The interview kit (`claude-kit/`, installed by
-  `scripts/install-claude-kit.sh`) goes into `~/.claude/commands`, so it works in the interviewers' repo too:
+- **Skills** (`~/.claude/skills/<name>/SKILL.md`, **yours, in every project**) and project **commands**
+  (`.claude/commands/*.md`) are both typed as `/name`. `$ARGUMENTS` is whatever you type after the name.
+  Your pairing toolkit (`claude-kit/skills/`, installed by `scripts/install-claude-kit.sh`) goes into
+  `~/.claude/skills`, so it works in any repo, including the one you're handed:
 
-| Kit command | Use it for |
+| Toolkit skill | Use it for |
 |---------|-----------|
-| `/interview-mode` | First thing in any interview session |
-| `/requirements <paste>` | Every time the interviewer gives you requirements: questions to ask, criteria, `TASKS.md` |
+| `/pair-mode` | First thing in any pairing session: the working agreement |
+| `/requirements <paste>` | Every time you get requirements: clarifying questions, criteria, `TASKS.md` |
 | `/onboard` | The first 5 minutes in a handed-over codebase |
 | `/scaffold <name>` | Starting from scratch with Spring Initializr |
-| `/plan-first`, `/quiz-me`, `/review-mine` | Plan before coding, defend the code, review the diff |
+| `/plan-first`, `/review-mine`, `/explain-back` | Plan before coding, review the diff, check you can explain it |
+| `/wrap-up` | End of session: what changed, trade-offs, what's verified, what's next |
 
 Practice-only commands in this repo:
 

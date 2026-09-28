@@ -7,7 +7,7 @@ at a time. It's deliberately **Gradle** (not Maven), has **no README** and **no 
 ## Setup (≈ 3 min, not timed)
 1. Prep repo terminal: `./scripts/start-training.sh existing-code`
 2. *File → Open…* → the printed folder → *Trust Project*. IntelliJ detects Gradle and imports it (watch the bottom bar).
-3. ⌘Esc → `/interview-mode`
+3. ⌘Esc → `/pair-mode`
 
 ## Orient (≈ 8 min): show them you can read a codebase
 4. `/onboard`. While Claude works, explore yourself: ⌘1 (project tree) → ⌘O `TourService` → ⌘F12 → ⌘B into the
@@ -44,5 +44,5 @@ at a time. It's deliberately **Gradle** (not Maven), has **no README** and **no 
     yourself by adding `spring.jpa.show-sql=true`. Discuss the fix (one grouped query or a join), and implement it if there's time.
 
 ## Debrief
-- `/review-mine` · `/quiz-me` on `ReservationService`
+- `/review-mine` · `/explain-back` on `ReservationService` · `/wrap-up`
 - Compare with `solutions/training/existing-code/` in the prep repo.

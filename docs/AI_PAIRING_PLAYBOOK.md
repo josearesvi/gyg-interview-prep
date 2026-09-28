@@ -20,9 +20,32 @@ the right scenario."* With AI in the loop, **typing speed stops being the signal
 3. **Delegate small** (AI): one step at a time, with constraints in the prompt (see templates).
 4. **Verify** (you): read the diff in IntelliJ's diff viewer and run the tests. Say "this looks right because…"
    or "I don't like X, change it to Y."
-5. **Explain** (you): summarise the change and its trade-off in 2 sentences. Practise this with `/quiz-me`.
+5. **Explain** (you): summarise the change and its trade-off in 2 sentences. Check yourself with `/explain-back`, and
+   close a session with `/wrap-up`.
 
 Rule of thumb: **the AI types, you decide.** If you can't explain a line, you don't accept it.
+
+## Presenting your toolkit (≈ 20 seconds, at the start)
+Switching the toolkit on openly is a strength: it shows you've thought about *how* to work with AI, not just that you
+use it. Say something like:
+
+> "I use Claude Code with a small set of skills I keep for pair programming. `/pair-mode` sets the working
+> agreement: small diffs, a plan before multi-file changes, tests after every edit, and it flags issues instead of
+> silently fixing them. I also have `/requirements` to turn a spec into acceptance criteria, `/onboard` for an
+> unfamiliar codebase, and `/review-mine` / `/wrap-up` at the end. I'll drive; it types. Stop me any time."
+
+Then type `/pair-mode`. The skills never mention interviews, so what appears on screen is just your workflow.
+
+| Moment | Skill |
+|---|---|
+| Start | `/pair-mode` |
+| Handed a codebase | `/onboard` |
+| Given requirements (and follow-ups) | `/requirements <paste>` |
+| Starting from nothing | `/scaffold <name>` |
+| Before each non-trivial change | `/plan-first <task>` |
+| After a change | `/review-mine` |
+| Before you move on (optional, on your own) | `/explain-back` |
+| Last 3–5 minutes | `/wrap-up` |
 
 ## Prompt templates that read well on a shared screen
 
@@ -40,7 +63,7 @@ Rule of thumb: **the AI types, you decide.** If you can't explain a line, you do
 
 | Level | What you own (say it out loud) | What you delegate | Drill |
 |------|---------------------------------|-------------------|-------|
-| 1 Algorithms | The algorithm, its complexity, the edge cases | Typing the implementation | Before prompting, state the approach and Big-O. Afterwards, check the AI really did O(n log k), not sort-then-slice. Then `/quiz-me`. **Also do E2 and E5 once by hand**: some interviewers still ask you to write one piece yourself. |
+| 1 Algorithms | The algorithm, its complexity, the edge cases | Typing the implementation | Before prompting, state the approach and Big-O. Afterwards, check the AI really did O(n log k), not sort-then-slice. Then `/explain-back`. **Also do E2 and E5 once by hand**: some interviewers still ask you to write one piece yourself. |
 | 2 Debugging | Reproducing each bug, the hypothesis, grouping failures by root cause | Reading the code for suspects, applying the one-line fix | Never type "fix all the tests". Take one ticket at a time: reproduce → hypothesis → confirm → fix → rerun. Notice that BUG-2 masks BUG-3. |
 | 3 Refactoring | The step order, keeping tests green, what counts as "done" | Mechanical extraction (repository, DTOs, advice) | Plan mode first: "5 safe steps". Run the tests after **each** step. Enable the `KnownBugs` tests one by one. Reject any step that changes behaviour and refactors at the same time. |
 | 4 Features | API design, the locking strategy, the idempotency semantics, the time boundary | Boilerplate, test scaffolding, JPA annotations | For Feature 3, **you** pick pessimistic vs optimistic vs atomic update and defend it; the AI implements it. Ask the AI "how could this still overbook?" and judge its answer. |

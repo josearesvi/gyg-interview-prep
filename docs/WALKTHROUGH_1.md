@@ -7,7 +7,7 @@ add follow-ups. The black-box acceptance tests play the interviewer's checks.
 1. In the prep repo's IntelliJ terminal (⌥F12): `./scripts/start-training.sh from-scratch`
 2. *File → Open…* → the printed `~/interview-sim/from-scratch-…` folder → **Open** → *Trust Project*
    (new window). Arrange the cockpit: terminal on the right.
-3. ⌘Esc → `/interview-mode`
+3. ⌘Esc → `/pair-mode`
 
 ## Part 1 (≈ 20 min)
 4. **The interviewer speaks**: in the *prep repo window* (⌘\`), open `training/from-scratch/sealed/REQUIREMENTS-1.md`.
@@ -38,6 +38,7 @@ add follow-ups. The black-box acceptance tests play the interviewer's checks.
 17. The discussion questions at the bottom of part 3: answer them aloud (scaling to 3 instances, DB schema, scraping).
 
 ## Debrief (5 min)
-- `/quiz-me` on the service class.
+- `/explain-back` on the service class.
+- `/wrap-up`: present the summary aloud.
 - `/review-mine` on the last commit.
 - Compare with `solutions/training/from-scratch/wishlist-api` in the prep repo.

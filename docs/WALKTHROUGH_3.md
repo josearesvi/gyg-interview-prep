@@ -5,7 +5,7 @@ interview repo (see `docs/RESEARCH_2026.md`). Do it once with me, then again alo
 
 ## T−24h: you "received the link" (≈ 45 min, the evening before)
 1. Prep repo terminal: `./scripts/start-training.sh gyg-replica`, then *File → Open…* the printed folder → Trust.
-2. Follow `training/gyg-replica/sealed/REQUEST-0.md`. Run it, `curl` every endpoint, `/interview-mode` + `/onboard`,
+2. Follow `training/gyg-replica/sealed/REQUEST-0.md`. Run it, `curl` every endpoint, `/pair-mode` + `/onboard`,
    and write your **smell list by layer**. **Fix nothing.**
 
 ## T0: the interview (set a 60-minute timer)
@@ -18,7 +18,7 @@ interview repo (see `docs/RESEARCH_2026.md`). Do it once with me, then again alo
 | 32–44 | **REQUEST-3** | JPQL `GROUP BY` + a constructor expression into a record in `dto/`. Say the field-order trap out loud. Run `Request3Test`. |
 | 44–52 | **REQUEST-4** | Count the queries first (`spring.jpa.show-sql=true` or `Request4Test`), then `LEFT JOIN FETCH`, `readOnly`. Discuss pagination and indexes. |
 | 52–55 | **REQUEST-5** | Name the weaknesses of the test suite; write or show one `@WebMvcTest`. |
-| 55–60 | **REQUEST-6** + your questions | The AI questions: frameworks in `docs/MOCK_INTERVIEW.md`. |
+| 55–60 | **REQUEST-6** + your questions | `/wrap-up` gives you the "what I'd do next" answer. The AI questions: frameworks in `docs/MOCK_INTERVIEW.md`. |
 
 Rules while you work: `/requirements` for each request, `/plan-first` before anything touching 2+ files, and small
 diffs reviewed in IntelliJ. Say the trade-off every time. **Say "I'd come back to X" and move on** rather than going
@@ -32,5 +32,5 @@ down a rabbit hole. The real interviewers care about prioritisation.
 - JSON is Jackson 3 (`tools.jackson.*`). That's why the recursive `/suppliers` fails with a "nesting depth" error.
 
 ## Debrief
-`/review-mine`, then `/quiz-me` on the service. Compare with `solutions/training/gyg-replica/`.
+`/review-mine`, then `/explain-back` on the service, then `/wrap-up` (present it aloud). Compare with `solutions/training/gyg-replica/`.
 Proof that the reference is complete: `./scripts/check-training.sh`.

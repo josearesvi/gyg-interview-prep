@@ -29,7 +29,7 @@ Ready: $DEST
 
 Next (all inside IntelliJ):
   1. IntelliJ: File > Open... (or "Open" on the Welcome screen) > $DEST > Open > Trust Project
-  2. ⌘Esc to start Claude Code, then type:  /interview-mode
+  2. ⌘Esc to start Claude Code, then type:  /pair-mode
   3. Follow docs/WALKTHROUGH_$(case "$NAME" in from-scratch) echo 1;; existing-code) echo 2;; *) echo 3;; esac).md in the prep repo.
      The interviewer's requirements are in the prep repo: training/$NAME/sealed/ (open them only when told).
 MSG

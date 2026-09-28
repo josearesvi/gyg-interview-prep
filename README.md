@@ -25,6 +25,7 @@ wasn't made with best practices in mind"*, where you **solve**, **debug**, **ref
 
 Start with [WALKTHROUGH_0](docs/WALKTHROUGH_0.md): the loop and the IntelliJ hotkeys, on Exercise 1.
 What we know about the real interview, with sources: [RESEARCH_2026](docs/RESEARCH_2026.md).
+The technical depth the newer exercises expect (REST contracts, Spring, JPA, concurrency): [TECH_FUNDAMENTALS](docs/TECH_FUNDAMENTALS.md).
 
 `solutions/` has a verified reference answer for everything. `./scripts/check-solutions.sh` and
 `./scripts/check-training.sh` prove them in temp copies, so your working tree is never touched.
@@ -43,9 +44,10 @@ What we know about the real interview, with sources: [RESEARCH_2026](docs/RESEAR
 ## Using Claude Code here
 - Read **[docs/CLAUDE_CODE_GUIDE.md](docs/CLAUDE_CODE_GUIDE.md)**: navigating a codebase, drills, and what to do live.
 - **IntelliJ as the cockpit** (Claude plugin, layout, ★ hotkeys): [docs/INTELLIJ_COCKPIT.md](docs/INTELLIJ_COCKPIT.md)
-- **Install the portable kit once**: `./scripts/install-claude-kit.sh`. It puts `/interview-mode`, `/requirements`,
-  `/onboard`, `/scaffold`, `/plan-first`, `/quiz-me` and `/review-mine` in `~/.claude`, so they also work in the
-  interviewers' project.
+- **Install your pairing toolkit once**: `./scripts/install-claude-kit.sh`. It installs `/pair-mode`, `/requirements`, `/onboard`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up` as
+  user-level skills in `~/.claude/skills`, so they work in any project, including the one you're handed. They're
+  worded as a professional pairing workflow you can openly switch on (see "Presenting your toolkit" in
+  `docs/AI_PAIRING_PLAYBOOK.md`).
 - **AI is allowed in the interview**, so practise *steering* it: **[docs/AI_PAIRING_PLAYBOOK.md](docs/AI_PAIRING_PLAYBOOK.md)**.
 - `CLAUDE.md` puts Claude in **pair mode**: small reviewable changes, tests run after each one, trade-offs
   named, `solutions/` off-limits unless you ask.

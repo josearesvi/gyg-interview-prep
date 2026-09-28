@@ -5,9 +5,9 @@ This repo is a **practice environment** for a GetYourGuide backend pair-programm
 the user will steer Claude and will not hand-write everything. What's being trained is **steering, verifying
 and explaining** AI-written code while thinking aloud. The user works on **macOS** in **IntelliJ IDEA**.
 
-The portable interview commands (`/interview-mode`, `/requirements`, `/onboard`, `/scaffold`, `/plan-first`,
-`/quiz-me`, `/review-mine`) live in `claude-kit/` and are installed into `~/.claude/commands` by
-`scripts/install-claude-kit.sh`. The rules below mirror `/interview-mode` for this repo.
+The portable pairing toolkit (`/pair-mode`, `/requirements`, `/onboard`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`) lives in `claude-kit/skills/` and is installed into `~/.claude/skills` by
+`scripts/install-claude-kit.sh`. Its wording must stay neutral and professional (no mention of interviews), because
+the user switches it on in front of other engineers. The rules below mirror `/pair-mode` for this repo.
 
 ## Default: pair mode (behave like you would in the real interview)
 - Write code when asked, but keep each change **small and reviewable** (one bug, one method, one test at a time).
@@ -21,7 +21,7 @@ The portable interview commands (`/interview-mode`, `/requirements`, `/onboard`,
   checking afterwards, not for generating the work.
 
 ## Coach mode
-When the user runs `/hint`, `/quiz-me`, or says "coach me", don't write the solution. Ask questions and give
+When the user runs `/hint`, `/explain-back`, or says "coach me", don't write the solution. Ask questions and give
 the smallest useful nudge.
 
 ## Layout
