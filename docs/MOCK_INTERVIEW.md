@@ -25,6 +25,25 @@ The table below is an alternative built from the levels. Reset first: `git stash
 - [ ] **AI used deliberately**: narrated, verified, didn't blindly accept
 - [ ] **User impact** mentioned (double charges, overbooked tours, stale ratings misleading travellers)
 
+## The AI questions (reported by candidates in 2026): have these ready
+Answer each in ≤ 90 s with a **concrete story**: situation → what you did with AI → how you verified → the outcome.
+
+1. **"How do you use AI day to day?"** One real example. Mention *how you verify*: tests, reading the diff, and a
+   second prompt asking "what could break this?". Mention where it saved time (boilerplate, navigating a codebase,
+   first drafts of tests) and where you took over.
+2. **"When should engineers NOT use AI?"** Pick 3 and justify them:
+   - security- or money-critical logic you can't fully verify quickly (auth, payments, pricing, PII handling);
+   - when you don't understand the problem yet, because AI makes you fast in the wrong direction;
+   - secrets or proprietary data in prompts;
+   - a one-line fix you can see: typing is faster than prompting;
+   - learning a core skill as a junior, where the struggle is the point.
+3. **"How would you mentor a colleague who ships AI code they don't understand?"** No blame. Pair on one PR and ask
+   them to walk through it line by line. Agree a rule ("you own every line you commit; if you can't explain it, it
+   doesn't merge"). Ask for tests first, and review prompts as well as diffs.
+   Point them to where AI shines for them (exploring unfamiliar code, generating test cases).
+4. **"What would you do next with this codebase?"** A prioritised list: correctness → data integrity (FK + cleanup
+   migration for orphans) → performance (N+1, pagination, indexes) → design → tests.
+
 ## Questions to ask them (pick 2–3)
 - How does the team split work between search/discovery, booking and supplier tooling? Which one is this role?
 - What does the path from PR to production look like, and how do you test booking flows before release?

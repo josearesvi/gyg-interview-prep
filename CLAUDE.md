@@ -29,9 +29,9 @@ the smallest useful nudge.
 - `level-2-debugging/`: `bookings-api` with 8 planted bugs (symptoms in its README)
 - `level-3-refactoring/`: `reviews-api` legacy god-controller + characterization tests
 - `level-4-features/`: `experiences-api` + `@Disabled` feature tests
-- `training/{from-scratch,existing-code}/project`: interview-day simulations (copied out with
-  `scripts/start-training.sh`); `training/*/sealed/`: the interviewer's requirements. Never read `sealed/` unless
-  the user asks you to reveal the next part
+- `training/{from-scratch,existing-code,gyg-replica}/project`: interview-day simulations (copied out with
+  `scripts/start-training.sh`); `training/*/sealed/` and `training/gyg-replica/sealed-tests/`: the interviewer's
+  requirements and hidden tests. Never read them unless the user asks you to reveal the next part
 - `solutions/<module>/`, `solutions/training/…`: reference answers (off-limits by default)
 - `docs/AI_PAIRING_PLAYBOOK.md`: how the user wants to work with you
 

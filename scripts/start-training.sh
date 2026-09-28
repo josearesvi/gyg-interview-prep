@@ -5,12 +5,13 @@
 #
 #   ./scripts/start-training.sh from-scratch
 #   ./scripts/start-training.sh existing-code [target-parent-dir]   (default: ~/interview-sim)
+#   ./scripts/start-training.sh gyg-replica      <- closest to the real GetYourGuide repo
 set -euo pipefail
 NAME="${1:-}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/training/$NAME/project"
 if [[ -z "$NAME" || ! -d "$SRC" ]]; then
-  echo "usage: $0 <from-scratch|existing-code> [target-parent-dir]" >&2
+  echo "usage: $0 <from-scratch|existing-code|gyg-replica> [target-parent-dir]" >&2
   exit 1
 fi
 DEST="${2:-$HOME/interview-sim}/$NAME-$(date +%Y%m%d-%H%M%S)"
@@ -29,6 +30,6 @@ Ready: $DEST
 Next (all inside IntelliJ):
   1. IntelliJ: File > Open... (or "Open" on the Welcome screen) > $DEST > Open > Trust Project
   2. ⌘Esc to start Claude Code, then type:  /interview-mode
-  3. Follow docs/WALKTHROUGH_$( [[ "$NAME" == from-scratch ]] && echo 1 || echo 2 ).md in the prep repo.
+  3. Follow docs/WALKTHROUGH_$(case "$NAME" in from-scratch) echo 1;; existing-code) echo 2;; *) echo 3;; esac).md in the prep repo.
      The interviewer's requirements are in the prep repo: training/$NAME/sealed/ (open them only when told).
 MSG

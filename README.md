@@ -10,7 +10,7 @@ wasn't made with best practices in mind"*, where you **solve**, **debug**, **ref
 
 | Level | Folder | You practise | Starts as |
 |-------|--------|-------------|-----------|
-| 1 | [`level-1-algorithms`](level-1-algorithms/README.md) | Sorting, binary search, recursion, trees, graphs (BFS), hashmaps | 34 red tests |
+| 1 | [`level-1-algorithms`](level-1-algorithms/README.md) | Sorting, binary search, recursion, trees, graphs (BFS), hashmaps, the HackerRank-style E7 | 42 red tests |
 | 2 | [`level-2-debugging`](level-2-debugging/README.md) | Finding 8 planted bugs from symptom-only tickets | 13 of 18 red |
 | 3 | [`level-3-refactoring`](level-3-refactoring/README.md) | Safely refactoring a legacy god-controller (SQL injection, stale cache, …) | 9 green + 3 disabled |
 | 4 | [`level-4-features`](level-4-features/README.md) | Pagination, idempotency, concurrency-safe booking, cancellation policy | 4 green + 11 disabled |
@@ -21,8 +21,10 @@ wasn't made with best practices in mind"*, where you **solve**, **debug**, **ref
 |----------|---------|-------|------------|-------|
 | A: from scratch | Requirements (3 parts) → build a "wishlist" API with `/scaffold` | Maven | 17 black-box HTTP acceptance tests | [WALKTHROUGH_1](docs/WALKTHROUGH_1.md) |
 | B: handed-over code | A "tour-inventory" service with a setup snag, then 3 requests (bug, feature, under-load) | **Gradle** | its own tests + the ones you add | [WALKTHROUGH_2](docs/WALKTHROUGH_2.md) |
+| **C: GetYourGuide replica** | A clean-room copy of **GetYourGuide's real interview repo** (activities & suppliers, Boot 4, ~20 planted issues) + the 24h-before prep | Maven | 12 sealed "interviewer" tests | [WALKTHROUGH_3](docs/WALKTHROUGH_3.md) |
 
 Start with [WALKTHROUGH_0](docs/WALKTHROUGH_0.md): the loop and the IntelliJ hotkeys, on Exercise 1.
+What we know about the real interview, with sources: [RESEARCH_2026](docs/RESEARCH_2026.md).
 
 `solutions/` has a verified reference answer for everything. `./scripts/check-solutions.sh` and
 `./scripts/check-training.sh` prove them in temp copies, so your working tree is never touched.

@@ -14,7 +14,7 @@ trap 'rm -rf "$WORK"' EXIT
 for sol in "$ROOT"/solutions/level-*; do
   mod="$(basename "$sol")"
   if [[ -f "$sol/DELETE" ]]; then
-    while read -r f; do [[ -n "$f" && "$f" != \#* ]] && rm -f "$WORK/$mod/$f"; done < "$sol/DELETE"
+    while read -r f; do [[ -n "$f" && "$f" != \#* ]] && rm -f "${WORK:?}/${mod:?}/${f:?}"; done < "$sol/DELETE"
   fi
   ( cd "$sol" && tar --exclude ./DELETE -cf - . ) | ( cd "$WORK/$mod" && tar -xf - )
 done

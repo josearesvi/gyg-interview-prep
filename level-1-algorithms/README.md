@@ -1,7 +1,7 @@
 # Level 1: Algorithms and data structures (plain Java, no Spring)
 
 Covers the doc's **"Algorithms: sorting, searching, recursion"** and **"Data structures: arrays, hashmaps,
-trees, graphs"**. All six exercises use travel-marketplace data, the way GetYourGuide would frame them.
+trees, graphs"**. All seven exercises use travel-marketplace data, the way GetYourGuide would frame them.
 
 | # | File | Topic | Difficulty | Target |
 |---|------|-------|-----------|--------|
@@ -11,6 +11,7 @@ trees, graphs"**. All six exercises use travel-marketplace data, the way GetYour
 | 4 | `E4_CategoryTree` | Trees, recursion → iteration | Medium | O(n), no stack overflow |
 | 5 | `E5_CityTransfers` | Graphs, BFS | Medium | O(V + E) |
 | 6 | `E6_BudgetPair` | HashMap ("two sum") | Easy | O(n) |
+| 7 | `E7_EventRegistration` | HashMaps + sets + sorting, **GetYourGuide's HackerRank take-home style** | Medium | O(1) register/cancel |
 
 Every method throws `UnsupportedOperationException` until you implement it, so all tests start **red**.
 
