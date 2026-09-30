@@ -60,7 +60,7 @@ can read the whole repo in seconds.** Practise everything below on this repo unt
 | `/onboard` | Does it build and run: tests, endpoints, setup snags |
 | `/best-practices-review [path] [quick\|full]` | A read-only audit: HTTP contract, errors, retries, events, coupling, logging, persistence, coverage |
 | `/assess-notes [path]` | Your own `// @review` comments in the code, each checked against best practices **and** how the repo handles the same case (standard / split / no precedent), with a recommendation |
-| `/investigate <symptom>` | A bug report → ranked hypotheses with where and how to confirm → a fix plan with a non-functional checklist |
+| `/investigate <symptom>` | A bug report → ranked hypotheses → **RED** (only the failing test; it stops) → "go green" → **GREEN** (smallest fix) → "go harden" (each non-functional item test-first) |
 | `/scaffold <name>` | Starting from scratch with Spring Initializr |
 | `/plan-first`, `/review-mine`, `/explain-back` | Plan before coding, review the diff, check you can explain it |
 | `/wrap-up` | End of session: what changed, trade-offs, what's verified, what's next |

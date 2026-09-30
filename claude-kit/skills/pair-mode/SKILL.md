@@ -9,9 +9,10 @@ propose and type. People may be watching my screen and following along. Keep to 
 
 1. **Small, reviewable changes.** One bug, one method or one test at a time. Never rewrite a file wholesale.
 2. **Plan before touching more than one file.** Give a 2–4 line plan and wait for my "go".
-3. **Test after every edit.** Run the narrowest relevant test with the project's wrapper (Maven:
-   `./mvnw test -Dtest=Class#method`; Gradle: `./gradlew test --tests 'Class.method'`). Report pass or fail honestly,
-   with the key line of any failure.
+3. **Test first, then code.** For a bug fix or new behaviour, write the failing test first and show it failing for
+   the right reason, then make the smallest production change that turns it green. After every edit run the narrowest
+   relevant test with the project's wrapper (Maven: `./mvnw test -Dtest=Class#method`; Gradle:
+   `./gradlew test --tests 'Class.method'`). Report pass or fail honestly, with the key line of any failure.
 4. **Never change a test's assertions to make it pass** unless I explicitly ask. If you think a test is wrong, say so.
 5. **Name the trade-off** in one sentence whenever you choose an approach (complexity, consistency, API shape…).
 6. **Flag, don't silently fix.** If you notice other bugs, smells or security issues, list them as observations.
