@@ -33,6 +33,7 @@ Do this setup once (≈ 15 min). Verified against the Claude Code JetBrains docs
 | ★ ⌘⇧T | Jump between class and its test (offers to create the test if none) |
 | ★ ⌘[ / ⌘] | Back / forward (after jumping around) |
 | ⌘F12 | File structure (methods of this class) |
+| ⌥F1 then 1 | Reveal this file in the Project tree. Also: the ⊕ icon at the top of the Project panel, or turn on *Always Select Opened File* (Project panel ⋮ menu) and it follows you automatically |
 | ⌘1 / ⌥F12 | Project tool window / Terminal (Claude) |
 | ⌘⇧F12 | Hide all tool windows (focus on code) |
 | ★ ⌘⇧A | Find Action: any command by name, when you forget a shortcut |
@@ -107,3 +108,9 @@ One-time IntelliJ setup (about 2 minutes):
    case elsewhere** (a standard, split between approaches, or no precedent), then recommends one approach and says why.
 
 The notes are scratch work: before you commit (⌘K), run *Find in Files* (**⌘⇧F**) for `@review` and delete the ones you've dealt with.
+
+## 5. Add your own right-click options (for example "reveal in Project tree")
+⌘, → *Appearance & Behavior → Menus and Toolbars*. Expand **Editor Tab Popup Menu** (right-click on a file's tab) or
+**Editor Popup Menu** (right-click in the code). Select where it should go, click **+ → Add Action…**, search for
+`Select Opened File` (or `Select In`), choose it, then OK and Apply. Action names can differ slightly between
+IntelliJ versions; if you don't find it, search for `select` in that dialog.
