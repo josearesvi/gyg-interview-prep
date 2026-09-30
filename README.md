@@ -45,7 +45,7 @@ The technical depth the newer exercises expect (REST contracts, Spring, JPA, con
 ## Using Claude Code here
 - Read **[docs/CLAUDE_CODE_GUIDE.md](docs/CLAUDE_CODE_GUIDE.md)**: navigating a codebase, drills, and what to do live.
 - **IntelliJ as the cockpit** (Claude plugin, layout, ★ hotkeys): [docs/INTELLIJ_COCKPIT.md](docs/INTELLIJ_COCKPIT.md)
-- **Install your pairing toolkit once**: `./scripts/install-claude-kit.sh`. It installs `/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up` as
+- **Install your pairing toolkit once**: `./scripts/install-claude-kit.sh`. It installs `/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/assess-notes`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up` as
   user-level skills in `~/.claude/skills`, so they work in any project, including the one you're handed. They're
   worded as a professional pairing workflow you can openly switch on (see "Presenting your toolkit" in
   `docs/AI_PAIRING_PLAYBOOK.md`).

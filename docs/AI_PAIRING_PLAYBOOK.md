@@ -41,6 +41,7 @@ Then type `/pair-mode`. The skills never mention interviews, so what appears on 
 |---|---|
 | Start | `/pair-mode` |
 | Handed a codebase | `/describe-repo` → `/onboard` → `/best-practices-review quick` |
+| While reading code: you spot improvements | leave `// @review …` notes, then `/assess-notes` (setup in `docs/INTELLIJ_COCKPIT.md`) |
 | Something is broken (bug report, failing behaviour) | `/investigate <symptom>` |
 | Given requirements (and follow-ups) | `/requirements <paste>` |
 | Starting from nothing | `/scaffold <name>` |

@@ -5,7 +5,7 @@ This repo is a **practice environment** for a GetYourGuide backend pair-programm
 the user will steer Claude and will not hand-write everything. What's being trained is **steering, verifying
 and explaining** AI-written code while thinking aloud. The user works on **macOS** in **IntelliJ IDEA**.
 
-The portable pairing toolkit (`/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`) lives in `claude-kit/skills/` and is installed into `~/.claude/skills` by
+The portable pairing toolkit (`/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/assess-notes`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`) lives in `claude-kit/skills/` and is installed into `~/.claude/skills` by
 `scripts/install-claude-kit.sh`. Its wording must stay neutral and professional (no mention of interviews), because
 the user switches it on in front of other engineers. The rules below mirror `/pair-mode` for this repo.
 

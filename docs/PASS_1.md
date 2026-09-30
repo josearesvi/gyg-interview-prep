@@ -5,6 +5,7 @@ same loop. You make the decisions out loud; Claude reads and types.
 
 ```
 Orient   /describe-repo → /onboard → /best-practices-review quick     (on any codebase you didn't write)
+         while reading: leave `// @review …` notes, then /assess-notes
 Frame    /requirements <paste>   for new behaviour
          /investigate <symptom>  for something broken
 Decide   /plan-first <task>      → YOU choose the approach and say why

@@ -15,7 +15,7 @@ Do this setup once (≈ 15 min). Verified against the Claude Code JetBrains docs
    side-by-side diff, where you accept or reject them.
 6. **Screen-share readability**: ⌘, → *Editor → Font* → size 15–16. *Tools → Terminal* → same font size.
    To zoom on the fly: ⌘⇧A → "Increase Font Size in All Editors".
-7. **Toolkit**: in the prep repo's terminal, `./scripts/install-claude-kit.sh` (`/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`, as skills in every project).
+7. **Toolkit**: in the prep repo's terminal, `./scripts/install-claude-kit.sh` (`/pair-mode`, `/describe-repo`, `/onboard`, `/best-practices-review`, `/assess-notes`, `/requirements`, `/investigate`, `/scaffold`, `/plan-first`, `/review-mine`, `/explain-back` and `/wrap-up`, as skills in every project).
    Restart Claude Code afterwards.
 
 ## 2. Hotkeys (default macOS keymap)
@@ -88,3 +88,19 @@ Do this setup once (≈ 15 min). Verified against the Claude Code JetBrains docs
 └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 With two projects open (the prep repo holding the requirements, and the training copy), switch windows with **⌘`**.
+
+## 4. Review notes you can see at a glance (`// @review`) → `/assess-notes`
+While you read code, mark your own suggestions with a tag that stands out and that Claude can find:
+```java
+// @review This should be a validation error, not a not-found
+```
+One-time IntelliJ setup (about 2 minutes):
+1. **A keystroke for the tag**: ⌘, → *Editor → Live Templates* → select a group (e.g. *Java*) → **+ → Live Template**.
+   Abbreviation `rv`, description `Review note`, template text `// @review $END$`. Click *Define* and tick **Java**, then
+   Apply. Now type `rv` + **Tab** on a line to insert it.
+2. **A different colour and a list of all notes**: ⌘, → *Editor → TODO* → **+** → Pattern `\b@review\b.*`, pick an
+   icon and colour → Apply. Notes now stand out in the editor, and **⌘6** (TODO tool window) lists every one in the project.
+3. Run `/assess-notes` in Claude. It checks each note against best practices **and against how the repo handles the same
+   case elsewhere** (a standard, split between approaches, or no precedent), then recommends one approach and says why.
+
+The notes are scratch work: before you commit (⌘K), run *Find in Files* (**⌘⇧F**) for `@review` and delete the ones you've dealt with.
