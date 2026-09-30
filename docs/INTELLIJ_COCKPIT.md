@@ -95,9 +95,12 @@ While you read code, mark your own suggestions with a tag that stands out and th
 // @review This should be a validation error, not a not-found
 ```
 One-time IntelliJ setup (about 2 minutes):
-1. **A keystroke for the tag**: ⌘, → *Editor → Live Templates* → select a group (e.g. *Java*) → **+ → Live Template**.
-   Abbreviation `rv`, description `Review note`, template text `// @review $END$`. Click *Define* and tick **Java**, then
-   Apply. Now type `rv` + **Tab** on a line to insert it.
+1. **A keystroke for the tag.** `rv` is a name *you create*; IntelliJ doesn't have it until you do:
+   ⌘, → search `live templates` → *Editor → Live Templates* → **+** → *1. Live Template* (group: *Java*).
+   Abbreviation `rv`, description `Review note`, template text `// @review $END$`.
+   Under the text box click **Define** (next to "No applicable contexts"), tick **Java**, then Apply and OK.
+   To use it: on an **empty code line** type `rv`, press **Esc** if a suggestion popup opened, then press **Tab**.
+   If that doesn't expand, press **⌘J** and pick `rv`, or simply type `// @review ` by hand (nothing depends on the template).
 2. **A different colour and a list of all notes**: ⌘, → *Editor → TODO* → **+** → Pattern `\b@review\b.*`, pick an
    icon and colour → Apply. Notes now stand out in the editor, and **⌘6** (TODO tool window) lists every one in the project.
 3. Run `/assess-notes` in Claude. It checks each note against best practices **and against how the repo handles the same
